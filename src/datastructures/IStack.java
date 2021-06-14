@@ -4,11 +4,11 @@ public interface IStack<E>
 {
     boolean isEmpty();
 
-    void push(E elem);
-    E pop();
+    Object[] push(E elem);
+    Object[] pop();
     E top();
-
     int size();
-    void output();
+    Object[] output();
+
 }
 

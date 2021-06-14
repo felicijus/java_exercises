@@ -2,34 +2,54 @@ package datastructures;
 
 public class Test {
 
+    public static void out(ArrayStack a)
+    {
+        System.out.println("ArrayStack:");
+        for (int i = a.size()-1; i >= 0; i--)
+        {
+            System.out.println(a.output()[i]);
+        }
+    }
+
     public static void main(String[] args) {
 
         System.out.println("\nNew Stack of Type Integer");
-        IStack<Integer> s = new ArrayStack<Integer>();
-        s.push(20);
-        s.push(28);
-        s.push(2);
+        IStack<Integer> i = new ArrayStack<Integer>();
 
-        System.out.println(s.size());
+        System.out.println("Empty?: "+i.isEmpty());
 
-        System.out.println("Following items pushed to Stack as of now:");
-        s.output();
+        for (int k = 9; k >= 0; k--)
+        {
+            i.push(k);
+        }
+
+        Test.out((ArrayStack) i);
+
+        System.out.println();
+        System.out.println("Empty?: "+i.isEmpty());
+        System.out.println("Size: "+i.size());
+        i.pop();
+        System.out.println("Top: "+i.top());
+
+        Test.out((ArrayStack) i);
+
+
 
         System.out.println("\nNew Stack of Type String");
-        IStack<String> string = new ArrayStack<String>(9);
-        string.push("Aas");
-        string.push("B");
-        string.push("Ds");
+        IStack<String> s = new ArrayStack<String>();
 
-        System.out.println(string.size());
+        System.out.println("Empty?: "+s.isEmpty());
+        s.push("A");
+        s.push("B");
+        s.push("Hallo");
+        Test.out((ArrayStack) s);
 
-        System.out.println("Following items pushed to Stack as of now:");
-        string.output();
+        System.out.println();
+        System.out.println("Empty?: "+s.isEmpty());
+        System.out.println("Size: "+s.size());
+        s.pop();
+        System.out.println("Top: "+s.top());
 
-        System.out.println("\nTop String:"+string.top());
-
-        System.out.println("\nPop String:"+string.top());
-        string.pop();
-        string.output();
+        Test.out((ArrayStack) s);
     }
 }
