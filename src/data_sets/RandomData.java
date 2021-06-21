@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class RandomData extends ArrayList<Integer>
 {
-    private int n;
+    private final int n;
 
     public RandomData(int n)
     {

@@ -3,12 +3,10 @@ package datastructures;
 public interface IStack<E>
 {
     boolean isEmpty();
-
-    Object[] push(E elem);
-    Object[] pop();
+    void push(E elem);
+    E pop();
     E top();
     int size();
-    Object[] output();
 
 }
 

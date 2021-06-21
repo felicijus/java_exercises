@@ -23,7 +23,7 @@ public class Test {
             i.push(k);
         }
 
-        Test.out((ArrayStack) i);
+        out((ArrayStack) i);
 
         System.out.println();
         System.out.println("Empty?: "+i.isEmpty());
@@ -31,7 +31,7 @@ public class Test {
         i.pop();
         System.out.println("Top: "+i.top());
 
-        Test.out((ArrayStack) i);
+        out((ArrayStack) i);
 
 
 
@@ -42,7 +42,7 @@ public class Test {
         s.push("A");
         s.push("B");
         s.push("Hallo");
-        Test.out((ArrayStack) s);
+        out((ArrayStack) s);
 
         System.out.println();
         System.out.println("Empty?: "+s.isEmpty());
@@ -50,6 +50,6 @@ public class Test {
         s.pop();
         System.out.println("Top: "+s.top());
 
-        Test.out((ArrayStack) s);
+        out((ArrayStack) s);
     }
 }

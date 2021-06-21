@@ -3,7 +3,7 @@ package datastructures;
 
 public class ArrayStack<E> implements IStack<E>
 {
-    private E[] elements;
+    private final E[] stack;
     private int top_e;
     private static final int MAX = 10;
 
@@ -13,51 +13,47 @@ public class ArrayStack<E> implements IStack<E>
         top_e = -1;
     }
 
-    public ArrayStack(int initsize)
+    public ArrayStack(int init)
     {
-        elements = (E[]) new Object[initsize];
+        stack = (E[]) new Object[init];
         top_e = -1;
     }
+
+    protected Object[] output()
+    {
+        return stack;
+    }
+
 
     @Override
     public boolean isEmpty()
     {
-        if(top_e == -1)
-        {
-            return true;
-        }
-        else return false;
+        return top_e == -1;
     }
 
     @Override
-    public Object[] push(E elem)
+    public void push(E elem)
     {
-        elements[++top_e] = elem;
-        return elements;
+        stack[++top_e] = elem;
     }
 
     @Override
-    public Object[] pop()
+    public E pop()
     {
         --top_e;
-        return elements;
+        return stack[top_e];
     }
 
     @Override
     public E top()
     {
-        return elements[top_e];
+        return stack[top_e];
     }
 
     @Override
     public int size()
     {
         return top_e+1;
-    }
-
-    public Object[] output()
-    {
-        return elements;
     }
 }
 

@@ -15,7 +15,7 @@ public class InOut
         return d;
     }
 
-    public static void output(ArrayList array)
+    protected static void output(ArrayList array)
     {
         for (int i = 0; i < array.size(); i++)
         {
@@ -25,6 +25,6 @@ public class InOut
             }
             System.out.printf("%5s",array.get(i));
         }
-        System.out.println("");
+        System.out.println();
     }
 }
