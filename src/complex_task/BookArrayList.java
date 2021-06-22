@@ -2,6 +2,7 @@ package complex_task;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Scanner;
 
 class BookArrayList extends ArrayList<Book>
 {
@@ -113,5 +114,45 @@ class BookArrayList extends ArrayList<Book>
         }
         swap(i + 1, high);
         return (i + 1);
+    }
+
+    public void select_comperator_sort()
+    {
+        BookArrayList a = BookArrayList.this;
+        Comparator comp = null;
+
+        System.out.println("How should the List be sorted ?\n1 : ISBN\n2 : Author\n3 : Year");
+        Scanner scan_comp = new Scanner(System.in);
+
+        int select = scan_comp.nextInt();
+
+        switch (select)
+        {
+            case 1:
+                comp = new ComparatorISBN();
+                break;
+            case 2:
+                comp = new ComparatorAuthor();
+                break;
+            case 3:
+                comp = new ComparatorYear();
+                break;
+            default:
+                System.out.println("Ende");
+                return;
+        }
+
+        System.out.println("Which sorting algorithm should be used ?\n1 : bubble sort\n2 : quick sort");
+        Scanner scan_sort = new Scanner(System.in);
+        int sort = scan_sort.nextInt();
+
+        if (sort == 1)
+        {
+            a.sort_bubble(comp);
+        }
+        else if (sort == 2)
+        {
+            a.sort_quick(comp);
+        }
     }
 }

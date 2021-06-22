@@ -2,9 +2,9 @@ package complex_task;
 
 public class Book
 {
-    private int ISBN;
-    private String author;
-    private int year;
+    private final int ISBN;
+    private final String author;
+    private final int year;
 
     public Book(int I, String a, int y)
     {
