@@ -1,9 +1,6 @@
 package complex_task;
 
-import java.util.Comparator;
-import java.util.Hashtable;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Main
 {
@@ -44,27 +41,25 @@ public class Main
         //book_al.sort_quick(ISBNcomp);
         book_al.select_comperator_sort();
 
-        book_al.output();
+        book_al.output_ArrayList();
 
 
 
         System.out.println("\nHashtable : \n____________________________");
 
-        Hashtable<Integer, Book> book_ht = new Hashtable<Integer, Book>();
+        BookHashTable book_ht = new BookHashTable();
 
-        for (Book temp : book_al)
-        {
-            book_ht.put(temp.getISBN(), temp);
-        }
 
-        //book_ht.put(b1.getISBN(),b1);
+        book_ht.put(b1.getISBN(),b1);
+        book_ht.put(b2);
 
-        System.out.println(book_ht.keySet());
-        System.out.println(book_ht.values());
+        book_ht.putArrayList(book_al);
 
-        for (Map.Entry<Integer, Book> o : book_ht.entrySet())
-            System.out.printf(o.getKey() + ":" + o.getValue());
-        System.out.println();
+        //System.out.println(book_ht.keySet());
+        //System.out.println(book_ht.values());
 
+        book_ht.output_HashTable();
+
+        //System.out.println(book_ht.get(2323));
     }
 }

@@ -12,7 +12,7 @@ class BookArrayList extends ArrayList<Book>
 
     }
 
-    protected void output()
+    protected void output_ArrayList()
     {
         for (Book temp : BookArrayList.this)
         {
@@ -138,7 +138,7 @@ class BookArrayList extends ArrayList<Book>
                 comp = new ComparatorYear();
                 break;
             default:
-                System.out.println("Ende");
+                System.out.println("End");
                 return;
         }
 
