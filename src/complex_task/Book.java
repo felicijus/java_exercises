@@ -1,8 +1,6 @@
 package complex_task;
 
-import java.util.ArrayList;
-
-public class Book implements Comparable<Book>
+public class Book
 {
     private int ISBN;
     private String author;
@@ -30,8 +28,6 @@ public class Book implements Comparable<Book>
         return year;
     }
 
-
-
     @Override
     public String toString()
     {
@@ -41,20 +37,4 @@ public class Book implements Comparable<Book>
                 ", year=" + year +
                 '}'+"\n";
     }
-
-    @Override
-    //public int compareTo(Book b)
-    //{
-    //    return this.ISBN - b.getISBN();
-    //}
-
-    public int compareTo(Book b)
-    {
-        return getAuthor().compareTo(b.getAuthor());
-    }
-
-    //public int compareTo(Book b)
-    //{
-    //    return this.year - b.getYear();
-    //}
 }

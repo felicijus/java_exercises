@@ -1,5 +1,9 @@
 package complex_task;
 
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+
 public class Main
 {
     public static void main(String[] args)
@@ -12,25 +16,51 @@ public class Main
         System.out.println("Library : \n____________________________");
 
 
-        BookArrayList booklist = new BookArrayList();
-        booklist.add(b1);
-        booklist.add(b2);
-        booklist.add(b3);
-        booklist.add(b4);
-        booklist.add(new Book(2323,"REM", 1793));
+        System.out.println("\nArrayList : \n____________________________");
+        BookArrayList book_al = new BookArrayList();
+
+        ComparatorISBN ISBNcomp = new ComparatorISBN();
+        ComparatorAuthor authorcomp = new ComparatorAuthor();
+        ComparatorYear yearcomp = new ComparatorYear();
 
 
-        for (Book temp : booklist)
+        book_al.add(b1);
+        book_al.add(b2);
+        book_al.add(b3);
+        book_al.add(b4);
+        book_al.add(new Book(2323,"REM", 1793));
+
+
+        for (Book temp : book_al)
         {
             System.out.print(temp.toString());
         }
 
-        System.out.print(booklist);
+        //System.out.print(book_al);
         System.out.println();
 
+        //book_al.sort_bubble(yearcomp);
+        book_al.sort_quick(ISBNcomp);
+        book_al.output();
 
-        booklist.sort_bubble();
-        booklist.output();
+
+        System.out.println("\nHashtable : \n____________________________");
+
+        Hashtable<Integer,Book> book_ht = new Hashtable<Integer,Book>();
+
+        for (Book temp : book_al)
+        {
+            book_ht.put(temp.getISBN(), temp);
+        }
+
+        //book_ht.put(b1.getISBN(),b1);
+
+        System.out.println(book_ht.keySet());
+        System.out.println(book_ht.values());
+
+        for (Map.Entry<Integer, Book> o : book_ht.entrySet())
+            System.out.printf(o.getKey() + ":" + o.getValue());
+        System.out.println();
 
     }
 }
