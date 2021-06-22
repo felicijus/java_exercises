@@ -1,6 +1,7 @@
 package complex_task;
 
 import java.util.Map;
+import java.util.TreeSet;
 
 public class Main
 {
@@ -45,7 +46,7 @@ public class Main
 
 
 
-        System.out.println("\nHashtable : \n____________________________");
+        System.out.println("\nHashTable : \n____________________________");
 
         BookHashTable book_ht = new BookHashTable();
 
@@ -61,5 +62,29 @@ public class Main
         book_ht.output_HashTable();
 
         //System.out.println(book_ht.get(2323));
+
+
+
+        System.out.println("\nTreeset : \n____________________________");
+
+        TreeSet<Book> book_ts = new TreeSet<Book>(new ComparatorISBN());
+
+        book_ts.addAll(book_al);
+
+        for (Book b : book_ts)
+        {
+            System.out.print(b);
+        }
+
+
+        System.out.println("\nHashMap : \n____________________________");
+        BookHashMap book_hm = new BookHashMap();
+
+        //book_hm.put(b1.getISBN(),b1);
+
+
+        book_hm.putArrayList(book_al);
+        book_hm.output_HashMap();
+
     }
 }

@@ -30,6 +30,4 @@ public class BookHashTable extends Hashtable<Integer, Book>
             System.out.print(o.getKey() + ":" + o.getValue());
         }
     }
-
-
 }
