@@ -121,7 +121,7 @@ class BookArrayList extends ArrayList<Book>
         BookArrayList a = BookArrayList.this;
         Comparator comp = null;
 
-        System.out.println("How should the List be sorted ?\n1 : ISBN\n2 : Author\n3 : Year");
+        System.out.println("How should the AraayList be sorted ?\n1 : ISBN\n2 : Author\n3 : Year");
         Scanner scan_comp = new Scanner(System.in);
 
         int select = scan_comp.nextInt();
