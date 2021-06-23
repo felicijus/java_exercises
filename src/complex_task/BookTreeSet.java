@@ -13,6 +13,4 @@ public class BookTreeSet extends TreeSet<Book>
             System.out.print(o);
         }
     }
-
-
 }

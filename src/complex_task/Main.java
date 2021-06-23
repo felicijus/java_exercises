@@ -9,16 +9,16 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Book b1 = new Book(1233, "Felix", 2001);
-        Book b2 = new Book(5638, "Vincent", 2001);
-        Book b3 = new Book(7685678, "Goethe", 1873);
-        Book b4 = new Book(435, "Schiller", 1835);
-        Book b5 = new Book(46, "Schiller", 1835);
-        Book b6 = new Book(62, "Schiller", 1835);
-        Book b7 = new Book(34, "Schiller", 1835);
-        Book b8 = new Book(536, "Schiller", 1835);
-        Book b9 = new Book(876, "Schiller", 1835);
-        Book b10 = new Book(879, "Lessing", 1932);
+        Book b1 = new Book(87664, "Felix", 2001);
+        Book b2 = new Book(56382, "Vincent", 2001);
+        Book b3 = new Book(76856, "Goethe", 1873);
+        Book b4 = new Book(43545, "Schiller", 1835);
+        Book b5 = new Book(46363, "Schiller", 1835);
+        Book b6 = new Book(62234, "Schiller", 1835);
+        Book b7 = new Book(34245, "Schiller", 1835);
+        Book b8 = new Book(53623, "Schiller", 1835);
+        Book b9 = new Book(87624, "Schiller", 1835);
+        Book b10 = new Book(87925, "Lessing", 1932);
 
         System.out.println("Library : \n____________________________");
 
@@ -114,6 +114,7 @@ public class Main
 
 
         System.out.println("\nHashMap : \n____________________________");
+
         BookHashMap book_hm = new BookHashMap();
 
         //book_hm.put(b1.getISBN(),b1);

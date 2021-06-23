@@ -8,6 +8,16 @@ public class Book
 
     public Book(int I, String a, int y)
     {
+        if (I > 99999 || I < 00000)
+        {
+            throw new IllegalArgumentException("ISBN lenght can not be longer than 5 digits");
+        }
+
+        if (y > 2100)
+        {
+            throw new IllegalArgumentException("Year is Invalid");
+        }
+
         this.ISBN = I;
         this.author = a;
         this.year = y;
