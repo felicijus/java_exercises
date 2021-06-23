@@ -18,6 +18,7 @@ public class Main
         Book b7 = new Book(34, "Schiller", 1835);
         Book b8 = new Book(536, "Schiller", 1835);
         Book b9 = new Book(876, "Schiller", 1835);
+        Book b10 = new Book(879, "Lessing", 1932);
 
         System.out.println("Library : \n____________________________");
 
@@ -39,6 +40,7 @@ public class Main
         book_al.add(b7);
         book_al.add(b8);
         book_al.add(b9);
+        book_al.add(b10);
 
         //book_al.add(new Book(2323, "REM", 1793));
 

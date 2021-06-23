@@ -13,7 +13,6 @@ public class ComparatorYear implements Comparator<Book>
         if ( b1.getYear() - b2.getYear()<0) r=-1;
         return r;
 
-
         //return b1.getYear() - b2.getYear();
     }
 }

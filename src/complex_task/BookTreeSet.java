@@ -5,10 +5,6 @@ import java.util.TreeSet;
 
 public class BookTreeSet extends TreeSet<Book>
 {
-    BookTreeSet(ComparatorISBN comparatorISBN)
-    {
-
-    }
 
     protected void output_TreeSet()
     {
