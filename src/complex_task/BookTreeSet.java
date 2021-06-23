@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 public class BookTreeSet extends TreeSet<Book>
 {
-
+    //useless
     protected void output_TreeSet()
     {
         for (Book o : BookTreeSet.this)
