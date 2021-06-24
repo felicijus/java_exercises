@@ -12,14 +12,24 @@ public class BookHashMap extends HashMap<Integer,Book>
 
     public void put(Book b)
     {
-        put(b.getISBN(),b);
+        Integer temp;
+        temp = b.getISBN();
+
+        int key = b.hashCode();
+
+        put(key,b);
     }
 
     public void putArrayList(BookArrayList al)
     {
-        for (Book temp : al)
+        for (Book b : al)
         {
-            BookHashMap.this.put(temp.getISBN(), temp);
+            Integer temp;
+            temp = b.getISBN();
+
+            int key = b.hashCode();
+
+            BookHashMap.this.put(key, b);
         }
     }
 
@@ -27,7 +37,7 @@ public class BookHashMap extends HashMap<Integer,Book>
     {
         for (Map.Entry o : BookHashMap.this.entrySet())
         {
-            System.out.print(o.getKey() + ":" + o.getValue());
+            System.out.print(o.getKey() + ":        " + o.getValue());
         }
     }
 }
