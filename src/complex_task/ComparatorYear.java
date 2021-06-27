@@ -1,3 +1,9 @@
+/*
+ * Author: Felix Schneider
+ * Source: none
+ * Last Change: 27.06.21
+ */
+
 package complex_task;
 
 import java.util.Comparator;

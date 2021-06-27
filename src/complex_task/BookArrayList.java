@@ -1,3 +1,9 @@
+/*
+ * Author: Felix Schneider
+ * Source: none
+ * Last Change: 27.06.21
+ */
+
 package complex_task;
 
 import java.util.ArrayList;
@@ -21,7 +27,7 @@ class BookArrayList extends ArrayList<Book>
     }
 
 
-    public void sort_bubble(Comparator comp)
+    protected void sort_bubble(Comparator comp)
     {
         System.out.println("Sorting Books [Bubble]");
         int n = BookArrayList.this.size();
@@ -43,7 +49,7 @@ class BookArrayList extends ArrayList<Book>
     }
 
 
-    public void sort_quick(Comparator comp)
+    protected void sort_quick(Comparator comp)
     {
         BookArrayList a = BookArrayList.this;
         int low = 0;
@@ -62,7 +68,7 @@ class BookArrayList extends ArrayList<Book>
         }
     }
 
-    public void sort_quick(Comparator comp, int low, int high)
+    protected void sort_quick(Comparator comp, int low, int high)
     {
         if (low < high)
         {
@@ -116,12 +122,12 @@ class BookArrayList extends ArrayList<Book>
         return (i + 1);
     }
 
-    public void select_comperator_sort()
+    protected void select_comperator_sort()
     {
         BookArrayList a = BookArrayList.this;
         Comparator comp = null;
 
-        System.out.println("How should the AraayList be sorted ?\n1 : ISBN\n2 : Author\n3 : Year");
+        System.out.println("How should the ArrayList be sorted ?\n1 : ISBN\n2 : Author\n3 : Year");
         Scanner scan_comp = new Scanner(System.in);
 
         int select = scan_comp.nextInt();

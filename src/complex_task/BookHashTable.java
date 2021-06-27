@@ -1,33 +1,41 @@
+/*
+ * Author: Felix Schneider
+ * Source: none
+ * Last Change: 27.06.21
+ */
+
 package complex_task;
 
+import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.Map;
 
-public class BookHashTable extends Hashtable<Integer, Book>
+
+public class BookHashTable extends Hashtable<String,Book>
 {
     BookHashTable()
     {
 
     }
 
-    public void put(Book b)
+    protected void put(Book b)
     {
-        Integer temp;
+        String temp;
         temp = b.getISBN();
 
-        int key = b.hashCode();
+        String key = SHA1.get_SHA1(temp);//Hashing mit SHA1
 
-        put(b.getISBN(),b);
+        put(key,b);
     }
 
-    public void putArrayList(BookArrayList al)
+    protected void putArrayList(BookArrayList al)
     {
         for (Book b : al)
         {
-            Integer temp;
+            String temp;
             temp = b.getISBN();
 
-            int key = b.hashCode();
+            String key = SHA1.get_SHA1(temp);
+
 
             BookHashTable.this.put(key, b);
         }
@@ -35,7 +43,7 @@ public class BookHashTable extends Hashtable<Integer, Book>
 
     protected void output_HashTable()
     {
-        for (Map.Entry o : BookHashTable.this.entrySet())
+        for (HashMap.Entry o : BookHashTable.this.entrySet())
         {
             System.out.print(o.getKey() + ":        " + o.getValue());
         }

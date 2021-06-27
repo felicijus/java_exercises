@@ -1,18 +1,19 @@
+/*
+ * Author: Felix Schneider
+ * Source: none
+ * Last Change: 27.06.21
+ */
+
 package complex_task;
 
 public class Book
 {
-    private final int ISBN;
+    private final String ISBN;
     private final String author;
     private final int year;
 
-    public Book(int I, String a, int y)
+    public Book(String I, String a, int y)
     {
-        if (I > 99999 || I < 00000)
-        {
-            throw new IllegalArgumentException("ISBN lenght can not be longer than 5 digits");
-        }
-
         if (y > 2100)
         {
             throw new IllegalArgumentException("Year is Invalid");
@@ -23,7 +24,7 @@ public class Book
         this.year = y;
     }
 
-    public int getISBN()
+    public String getISBN()
     {
         return ISBN;
     }
@@ -41,10 +42,10 @@ public class Book
     @Override
     public String toString()
     {
-        return "Book{" +
-                "ISBN=" + ISBN +
-                ", author='" + author + '\'' +
-                ", year=" + year +
+        return "Book    { " +
+                "ISBN = " + ISBN +
+                ", author = '" + author + '\'' +
+                ", year = " + year +
                 '}'+"\n";
     }
 }

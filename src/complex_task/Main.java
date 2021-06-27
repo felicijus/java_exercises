@@ -1,36 +1,41 @@
+/*
+ * Author: Felix Schneider
+ * Source: none
+ * Last Change: 27.06.21
+ */
+
 package complex_task;
 
 import java.util.Comparator;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeSet;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        Book b1 = new Book(87664, "Felix", 2001);
-        Book b2 = new Book(56382, "Vincent", 2001);
-        Book b3 = new Book(76856, "Goethe", 1873);
-        Book b4 = new Book(43545, "Schiller", 1835);
-        Book b5 = new Book(46363, "Schiller", 1835);
-        Book b6 = new Book(62234, "Schiller", 1835);
-        Book b7 = new Book(34245, "Schiller", 1835);
-        Book b8 = new Book(53623, "Schiller", 1835);
-        Book b9 = new Book(87624, "Schiller", 1835);
-        Book b10 = new Book(87925, "Lessing", 1932);
+        //Konnte nicht wiederstehen den String zu benutzen :)
+
+        Book b1 = new Book("0-3843-3619-1", "Lucinda Riley", 2001);
+        Book b2 = new Book("0-5767-8397-8", "Juli Zeh", 2011);
+        Book b3 = new Book("0-8937-3059-9", "Johann Wolfgang von Goethe", 1873);
+        Book b4 = new Book("0-7090-6231-1", "Donna Leon", 2020);
+        Book b5 = new Book("0-8861-0600-1", "Helga Schubert", 2020);
+        Book b6 = new Book("0-2247-9546-5", "Benedict Wells", 2006);
+        Book b7 = new Book("0-3959-8551-X", "Sebastian Fritzek", 2020);
+        Book b8 = new Book("0-9181-7465-1", "Friedrich Schiller", 1786);
+        Book b9 = new Book("0-1686-9153-1", "Friedrich Schiller", 1835);
+        Book b10 = new Book("0-1959-0557-1", "Gotthold Ephraim Lessing", 1753);
 
         System.out.println("Library : \n____________________________");
 
-        ComparatorISBN ISBNcomp = new ComparatorISBN();
+        /*ComparatorISBN ISBNcomp = new ComparatorISBN();
         ComparatorAuthor authorcomp = new ComparatorAuthor();
-        ComparatorYear yearcomp = new ComparatorYear();
+        ComparatorYear yearcomp = new ComparatorYear();*/
 
 
         System.out.println("\nArrayList : \n____________________________");
         BookArrayList book_al = new BookArrayList();
 
-
+        //book_al.add(new Book(2323, "REM", 1793));
         book_al.add(b1);
         book_al.add(b2);
         book_al.add(b3);
@@ -42,7 +47,6 @@ public class Main
         book_al.add(b9);
         book_al.add(b10);
 
-        //book_al.add(new Book(2323, "REM", 1793));
 
         for (Book temp : book_al)
         {
@@ -59,58 +63,41 @@ public class Main
         book_al.output_ArrayList();
 
 
+
         System.out.println("\nHashTable : \n____________________________");
 
         BookHashTable book_ht = new BookHashTable();
 
 
-        book_ht.put(b1.getISBN(),b1);
         book_ht.put(b2);
 
         book_ht.putArrayList(book_al);
 
         //System.out.println(book_ht.keySet());
         //System.out.println(book_ht.values());
-
         book_ht.output_HashTable();
 
-        //System.out.println(book_ht.get(2323));
+        //Key test
+        /*String temp;
+        temp = b1.getISBN();    //b1 == Book 1
+        String key = SHA1.get_SHA1(temp);
+
+        System.out.println(book_ht.get(key));*/
 
 
 
         System.out.println("\nTreeset : \n____________________________");
 
-        Comparator comp = null;
-
-        System.out.println("How should the TreeSet be sorted ?\n1 : ISBN\n2 : Author\n3 : Year");
-        Scanner scan_comp = new Scanner(System.in);
-
-        int select = scan_comp.nextInt();
-
-        switch (select)
-        {
-            case 1:
-                comp = new ComparatorISBN();
-                break;
-            case 2:
-                comp = new ComparatorAuthor();
-                break;
-            case 3:
-                comp = new ComparatorYear();
-                break;
-            default:
-                System.out.println("End");
-                return;
-        }
-
-        TreeSet<Book> book_ts = new TreeSet<Book>(comp);
+        BookTreeSet book_ts = new BookTreeSet(BookTreeSet.select_comperator());
 
         book_ts.addAll(book_al);
 
-        for (Book b : book_ts)
+        /*for (Book b : book_ts)
         {
             System.out.print(b);
-        }
+        }*/
+        book_ts.output_TreeSet();
+
 
 
         System.out.println("\nHashMap : \n____________________________");
