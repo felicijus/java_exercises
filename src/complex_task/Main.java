@@ -4,9 +4,9 @@
  * Last Change: 27.06.21
  * */
 
-
 package complex_task;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Main
@@ -33,20 +33,31 @@ public class Main
         ComparatorYear yearcomp = new ComparatorYear();*/
 
 
+        ArrayList<Book> list = new ArrayList<Book>();
+        list.add(b1);
+        list.add(b2);
+        list.add(b3);
+        list.add(b4);
+        list.add(b5);
+        list.add(b6);
+        list.add(b7);
+        list.add(b8);
+        list.add(b9);
+        list.add(b10);
+
+        for (Book temp : list)
+        {
+            System.out.print(temp.toString());
+        }
+
+
         System.out.println("\nArrayList : \n____________________________");//Felix Schneider
         BookArrayList book_al = new BookArrayList();
 
+
+        book_al.addAll(list);
         //book_al.add(new Book(2323, "REM", 1793));
-        book_al.add(b1);
-        book_al.add(b2);
-        book_al.add(b3);
-        book_al.add(b4);
-        book_al.add(b5);
-        book_al.add(b6);
-        book_al.add(b7);
-        book_al.add(b8);
-        book_al.add(b9);
-        book_al.add(b10);
+
 
 
         for (Book temp : book_al)
