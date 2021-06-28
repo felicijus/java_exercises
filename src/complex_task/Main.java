@@ -1,8 +1,9 @@
 /*
- * Author: Felix Schneider
+ * Author: Felix Schneider und Vincent Becker
  * Source: none
  * Last Change: 27.06.21
- */
+ * */
+
 
 package complex_task;
 
@@ -64,7 +65,7 @@ public class Main
 
 
 
-        System.out.println("\nHashTable : \n____________________________");//Felix Schneider
+        System.out.println("\nHashTable : \n____________________________");//Vincent Becker
 
         BookHashTable book_ht = new BookHashTable();
 
@@ -100,7 +101,7 @@ public class Main
 
 
 
-        System.out.println("\nHashMap : \n____________________________");//Vincent Becker
+        System.out.println("\nHashMap : \n____________________________");//Felix Schneider
 
         BookHashMap book_hm = new BookHashMap();
 

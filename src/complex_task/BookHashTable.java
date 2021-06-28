@@ -1,7 +1,7 @@
 /*
- * Author: Felix Schneider
+ * Author: Vincent Becker
  * Source: none
- * Last Change: 25.06.21
+ * Last Change: 27.06.21
  */
 
 package complex_task;
