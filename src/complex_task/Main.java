@@ -32,7 +32,7 @@ public class Main
         ComparatorYear yearcomp = new ComparatorYear();*/
 
 
-        System.out.println("\nArrayList : \n____________________________");
+        System.out.println("\nArrayList : \n____________________________");//Felix Schneider
         BookArrayList book_al = new BookArrayList();
 
         //book_al.add(new Book(2323, "REM", 1793));
@@ -64,7 +64,7 @@ public class Main
 
 
 
-        System.out.println("\nHashTable : \n____________________________");
+        System.out.println("\nHashTable : \n____________________________");//Felix Schneider
 
         BookHashTable book_ht = new BookHashTable();
 
@@ -86,7 +86,7 @@ public class Main
 
 
 
-        System.out.println("\nTreeset : \n____________________________");
+        System.out.println("\nTreeset : \n____________________________");//Vincent Becker
 
         BookTreeSet book_ts = new BookTreeSet(BookTreeSet.select_comperator());
 
@@ -100,7 +100,7 @@ public class Main
 
 
 
-        System.out.println("\nHashMap : \n____________________________");
+        System.out.println("\nHashMap : \n____________________________");//Vincent Becker
 
         BookHashMap book_hm = new BookHashMap();
 

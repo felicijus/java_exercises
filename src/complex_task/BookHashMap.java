@@ -1,5 +1,5 @@
 /*
- * Author: Felix Schneider
+ * Author: Vincent Becker
  * Source: none
  * Last Change: 27.06.21
  */
