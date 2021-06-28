@@ -25,13 +25,14 @@ public class Main
         Book b8 = new Book("0-9181-7465-1", "Friedrich Schiller", 1786);
         Book b9 = new Book("0-1686-9153-1", "Friedrich Schiller", 1835);
         Book b10 = new Book("0-1959-0557-1", "Gotthold Ephraim Lessing", 1753);
+        Book b11 = new Book();
+        Book b12 = new Book("0-5959-0557-1");
 
         System.out.println("Library : \n____________________________");
 
         /*ComparatorISBN ISBNcomp = new ComparatorISBN();
         ComparatorAuthor authorcomp = new ComparatorAuthor();
         ComparatorYear yearcomp = new ComparatorYear();*/
-
 
         ArrayList<Book> list = new ArrayList<Book>();
         list.add(b1);
@@ -44,6 +45,8 @@ public class Main
         list.add(b8);
         list.add(b9);
         list.add(b10);
+        list.add(b11);
+        list.add(b12);
 
         for (Book temp : list)
         {
@@ -51,13 +54,13 @@ public class Main
         }
 
 
-        System.out.println("\nArrayList : \n____________________________");//Felix Schneider
-        BookArrayList book_al = new BookArrayList();
 
+        System.out.println("\nArrayList : \n____________________________");//Felix Schneider
+
+        BookArrayList book_al = new BookArrayList();
 
         book_al.addAll(list);
         //book_al.add(new Book(2323, "REM", 1793));
-
 
 
         for (Book temp : book_al)
@@ -68,9 +71,9 @@ public class Main
         //System.out.print(book_al);
         System.out.println();
 
-        //book_al.sort_bubble(yearcomp);
+        book_al.select_comperator_sort();//Auswahl Comperator und Sortieralgorthmus
+        // book_al.sort_bubble(yearcomp);
         //book_al.sort_quick(ISBNcomp);
-        book_al.select_comperator_sort();
 
         book_al.output_ArrayList();
 
@@ -88,13 +91,6 @@ public class Main
         //System.out.println(book_ht.keySet());
         //System.out.println(book_ht.values());
         book_ht.output_HashTable();
-
-        //Key test
-        /*String temp;
-        temp = b1.getISBN();    //b1 == Book 1
-        String key = SHA1.get_SHA1(temp);
-
-        System.out.println(book_ht.get(key));*/
 
 
 
@@ -120,5 +116,12 @@ public class Main
 
         book_hm.putArrayList(book_al);
         book_hm.output_HashMap();
+
+        //Key test
+        /*String temp;
+        temp = b1.getISBN();    //b1 == Book 1
+        String key = SHA1.get_SHA1(temp);
+
+        System.out.println(book_hm.get(key));*/
     }
 }

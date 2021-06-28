@@ -12,6 +12,21 @@ public class Book
     private final String author;
     private final int year;
 
+
+    public Book()
+    {
+        this.ISBN = "empty";
+        this.author = "empty";
+        this.year = 0;
+    }
+
+    public Book(String I)
+    {
+        this.ISBN = I;
+        this.author = "empty";
+        this.year = 0;
+    }
+
     public Book(String I, String a, int y)
     {
         if (y > 2100)
